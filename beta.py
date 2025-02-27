@@ -10,15 +10,7 @@ import time
 import re
 
 def scrape_amazon_products(url):
-    """
-    Scrapes product details from Amazon using Selenium
     
-    Args:
-        url (str): Amazon search results URL
-        
-    Returns:
-        list: List of dictionaries containing product details
-    """
     # Set up Chrome options
     chrome_options = Options()
     chrome_options.add_argument("--headless")  # Run in headless mode (no browser UI)
@@ -247,13 +239,7 @@ def scrape_amazon_products(url):
         print("WebDriver closed")
 
 def save_to_csv(products, filename="amazon_products.csv"):
-    """
-    Saves product details to a CSV file
     
-    Args:
-        products (list): List of dictionaries containing product details
-        filename (str): Name of the CSV file
-    """
     # Define field names
     fieldnames = ["Product Name", "Price", "Rating", "Seller Name"]
     
